@@ -1,0 +1,23 @@
+\documentclass[english,11pt]{article}
+
+\usepackage{pstricks2}
+\usepackage{pst-node2}
+\usepackage{pst-plot2}
+\psset[pstricks]{subgriddiv=0,griddots=5,gridlabels=7pt}
+
+\begin{document}
+\makeatletter
+%\pst@famlist
+\makeatother
+
+\begin{pspicture}(5,6)
+  \circlenode{A}{A}
+  \rput(0,4){\circlenode{B}{B}}
+  \psset{arrowscale=2,linearc=0.2,%
+    linecolor=red,armA=0.5,angleA=90,angleB=-90}
+  \ncdiag[lineAngle=20]{->}{A}{B}% doesn't work
+%  \ncdiag{->}{A}{B}
+\end{pspicture}
+
+\end{document}
+
